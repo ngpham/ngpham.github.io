@@ -10,6 +10,7 @@ timezone: US/CT
 locale: "en-US"
 title: "self.randomize()"
 url: "https://ngpham.github.io"
+repository: "https://github.com/ngpham/ngpham.github.io"
 
 permalink: /:year/:month/:day/:title/
 
