@@ -15,9 +15,12 @@ but marketing. However, as I have seen so many excellent blogs, books, papers,
 source code,... I concluded that the bar is high. It is tough to create an artifact which is both
 new and interesting.
 
-### Trefoil knot
-My avatar picture is the trefoil knot drawn with 11 segments. Below is the
+### Others
+If you care about my face, please check my facebook. For this blog, my avatar is a trefoil knot,
+drawn with 11 segments. Below is the
 6-segment animation, inspired by [Kaleidoscope](http://www.chiptune.com/kaleidoscope/).
+
+Since 2016, I started teaching myself piano, and will keep saving some of the progress on my youtube.
 
 <script type="text/javascript" src="/assets/js/about.js"></script>
 
