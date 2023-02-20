@@ -1,9 +1,4 @@
----
-layout: post
-title:  "Disruptor, Multithreading Message Broker"
-categories: programming
-tags: concurrency jvm
----
+# **[[⇇]](../index.md)** Disruptor, Multithreading Message Broker
 
 I came across [LMax Disruptor](https://lmax-exchange.github.io/disruptor/) when reading about
 Log4j asynchronous logger. Since the Disruptor is rather interesting, I attempted
@@ -12,7 +7,7 @@ https://github.com/ngpham/conature/blob/master/util/src/main/scala/Disruptor.sca
 but at a smaller scope, just to capture the main idea of this utility.
 
 
-### What is it good for?
+## What is it good for?
 
 Take Log4j for a use case. Under the hood, this logging piece is doing quite a
 heavy work. It must log messages from multiple threads of execution,
@@ -26,7 +21,7 @@ supporting this finding.
 
 A more complex use case is at LMax themselves, which we will peek at later.
 
-### Simple implementation
+## Simple implementation
 
 My goal is to implement the **n-m threads multicast** disruptor. My implementation is about 300
 lines of Scala, a minuscule compared to LMax full fledged implementation. However, I hope to capture
@@ -102,7 +97,7 @@ spin lock is better under high load. For my simple implementation, the strategie
 writers will spin with CAS (compare and set) should they have to compete among themselves, while
 writers/readers signalling are blocking wait.
 
-### Why LMax Disruptor is fast?
+## Why LMax Disruptor is fast?
 
 LMax uses disruptor for their trading platform with high throughput and low latency, and they
 engineer it to smallest details: Padding objects for cache sympathy, using `unsafe`
@@ -120,7 +115,7 @@ pre-allocated byte array. (Or maybe the buffer itself is a huge byte array.) Usi
 (for example, [Kryo](https://github.com/EsotericSoftware/kryo)), read/write is performed directly
 on the ring. With this setup, after the JVM warms up, the ring buffer is GC free.
 
-### Conclusion
+## Conclusion
 
 I implemented the Disruptor, with intention to use it for logging in my
 [conature](https://github.com/ngpham/conature). However, I later opted for a simple event bus

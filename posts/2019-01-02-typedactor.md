@@ -1,9 +1,4 @@
----
-layout: post
-title:  "Typed Actor, Discipline vs Burden"
-categories: programming
-tags: concurrency jvm asynchronous higher-kinded-type type-lambda
----
+# **[[⇇]](../index.md)** Actor with Types
 
 In the previous post, I mentioned the experiment with fully typed actors, and now I completed
 most of the work. The new implementation and the README was updated on
